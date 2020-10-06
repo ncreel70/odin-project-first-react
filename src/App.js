@@ -22,7 +22,6 @@ class App extends Component {
 
   render() {
     const { taskArray } = this.state;
-    console.log(this.state);
     if (taskArray) {
     }
     return (
