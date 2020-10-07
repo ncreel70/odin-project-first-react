@@ -13,20 +13,22 @@ class App extends Component {
     });
   };
 
-  appendTask = () => {
+  appendTask = (event) => {
+    event.preventDefault();
     const { task, taskArray } = this.state;
     this.setState({
       taskArray: taskArray.concat(task),
+      task: "",
     });
   };
 
   render() {
-    const { taskArray } = this.state;
+    const { task, taskArray } = this.state;
     if (taskArray) {
     }
     return (
       <div className="App">
-        <input type="text" onChange={this.updateTask}></input>
+        <input type="text" value={task} onChange={this.updateTask}></input>
         <button type="submit" onClick={this.appendTask}>
           Submit
         </button>

@@ -3,11 +3,11 @@ import React from "react";
 const Overview = (props) => {
   return (
     <div>
-      <ol>
+      <ul>
         {props.taskList.map((task, index) => (
           <li key={index}>{task}</li>
         ))}
-      </ol>
+      </ul>
     </div>
   );
 };
